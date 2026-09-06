@@ -1,0 +1,3 @@
+# pre-commit: Run lint-staged on all staged files.
+# Aborts the commit if linting or formatting fails.
+pnpm exec lint-staged

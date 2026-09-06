@@ -1,0 +1,7 @@
+# commit-msg: Validate commit message against Conventional Commits spec.
+# Aborts commit if message format is invalid.
+# Examples of valid messages:
+#   feat: add hero section
+#   fix: resolve mobile layout bug
+#   chore: update dependencies
+pnpm exec commitlint --edit "$1"

@@ -1,0 +1,14 @@
+.next
+node_modules
+out
+build
+dist
+.turbo
+components/ui
+.vscode
+.qodo
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+next-env.d.ts
+*.tsbuildinfo

@@ -1,0 +1,4 @@
+# pre-push: Full TypeScript type-check before pushing to remote.
+# Aborts push if any type errors are found.
+# This is intentionally placed on pre-push (not pre-commit) to keep commits fast.
+pnpm typecheck
