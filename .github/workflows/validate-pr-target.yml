@@ -1,0 +1,40 @@
+# Check PR source & author only on PRs targeting the 'main' branch
+# PR must come from 'development' branch and author must be repo owner
+# PRs from forks cannot target 'main' directly
+
+name: Validate PR Target
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened]
+
+jobs:
+  validate:
+    name: Check PR Source & Author
+    runs-on: ubuntu-latest
+    env:
+      REQUIRED_BRANCH: development
+      REPO_OWNER: ${{ github.repository_owner }}
+    steps:
+      - name: Verify PR source branch
+        if: ${{ github.head_ref != env.REQUIRED_BRANCH }}
+        run: |
+          echo "❌ PRs to main must come from the '${{ env.REQUIRED_BRANCH }}' branch."
+          exit 1
+
+      - name: Verify PR author is repo owner
+        if: ${{ github.actor != env.REPO_OWNER }}
+        run: |
+          echo "❌ Only the repository owner can open PRs into main."
+          exit 1
+
+      - name: Disallow PRs from forks
+        if: ${{ github.event.pull_request.head.repo.fork }}
+        run: |
+          echo "❌ PRs from forks cannot target main directly."
+          exit 1
+
+      - name: All checks passed
+        run: |
+          echo "✅ Valid PR: ${{ env.REQUIRED_BRANCH }} → main by ${{ env.REPO_OWNER }}"
