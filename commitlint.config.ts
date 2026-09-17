@@ -8,7 +8,7 @@ const config: UserConfig = {
     // Enforce type is not empty
     'type-empty': [2, 'never'],
     // Max line length for commit body
-    'body-max-line-length': [2, 'always', 100],
+    'body-max-line-length': [2, 'always', 500],
     // Allowed commit types
     'type-enum': [
       2,
