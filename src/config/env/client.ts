@@ -7,7 +7,7 @@ import { z } from 'zod';
  */
 export const clientEnv = createEnv({
   client: {
-    NEXT_PUBLIC_SENTRY_DSN: z.string().url().optional(),
+    NEXT_PUBLIC_SENTRY_DSN: z.string().url(),
   },
 
   // Must explicitly destructure NEXT_PUBLIC_* vars for Next.js static replacement
