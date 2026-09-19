@@ -72,6 +72,13 @@ const eslintConfig = defineConfig([
       '@next/next/no-html-link-for-pages': 'error',
     },
   },
+  {
+    // Centralized environment module is the ONLY file allowed to read raw process.env
+    files: ['src/config/env/server.ts', 'src/config/env/client.ts'],
+    rules: {
+      'no-process-env': 'off',
+    },
+  },
   eslintConfigPrettier,
   globalIgnores([
     '.next/**',
