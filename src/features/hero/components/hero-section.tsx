@@ -33,7 +33,7 @@ export function HeroSection() {
           </div>
 
           {/* Bio text */}
-          <p className="max-w-xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
+          <p className="max-w-xl text-base leading-relaxed text-pretty text-muted-foreground md:text-lg">
             {HERO_CONTENT.bio}
           </p>
 
@@ -64,7 +64,7 @@ export function HeroSection() {
               download
               className={cn(
                 buttonVariants({ variant: 'outline' }),
-                'group  rounded-xl border-border/80 bg-card/80 px-5 text-sm font-semibold text-foreground backdrop-blur-xs transition-[transform,background-color] duration-200 hover:-translate-y-0.5 hover:bg-muted md:px-6 md:text-base'
+                'group rounded-xl border-border/80 bg-card/80 px-5 text-sm font-semibold text-foreground backdrop-blur-xs transition-[transform,background-color] duration-200 hover:-translate-y-0.5 hover:bg-muted md:px-6 md:text-base'
               )}
             >
               <span>{HERO_CONTENT.secondaryCta.label}</span>

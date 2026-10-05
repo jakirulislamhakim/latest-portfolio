@@ -245,7 +245,6 @@ Every reusable design value is defined **once**, in **one central place**, and u
 - **Adding or changing a token is a global change.** In your reply, explain why the new token is needed, why existing ones do not fit, and what it affects. Never rename or delete a token without asking.
 - **The "one edit" test.** Before finishing, ask: "If the owner changes the primary color, a radius, or a font size, is it a one-line edit?" If not, fix it.
 
-
 ### 10.4 Reuse vs duplication
 
 - **Design values: centralize immediately** (10.2).
