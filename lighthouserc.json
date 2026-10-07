@@ -4,7 +4,7 @@
     "collect": {
       "startServerCommand": "pnpm start",
       "startServerReadyPattern": "Ready",
-      "numberOfRuns": 1,
+      "numberOfRuns": 2,
       "settings": {
         "preset": "desktop"
       }
