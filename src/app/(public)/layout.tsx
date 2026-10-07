@@ -20,7 +20,7 @@ export default function RootLayout({
       className={`${fontVariables} h-full scroll-smooth antialiased`}
       suppressHydrationWarning
     >
-      <body className="flex min-h-full flex-col">
+      <body className="flex min-h-full flex-col" suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

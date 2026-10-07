@@ -11,7 +11,7 @@ export const fontHeading = Manrope({
   subsets: ['latin'],
   variable: '--font-manrope',
   display: 'swap',
-  weight: ['400', '500', '600', '700'],
+  weight: ['600', '700', '800'],
 });
 
 export const fontBangla = Hind_Siliguri({
@@ -19,12 +19,14 @@ export const fontBangla = Hind_Siliguri({
   variable: '--font-hind-siliguri',
   display: 'swap',
   weight: ['400', '500', '600', '700'],
+  preload: false,
 });
 
 export const fontMono = Geist_Mono({
   subsets: ['latin'],
   variable: '--font-geist-mono',
   display: 'swap',
+  preload: false,
 });
 
 export const fontVariables = `${fontSans.variable} ${fontHeading.variable} ${fontBangla.variable} ${fontMono.variable}`;

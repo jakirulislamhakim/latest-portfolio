@@ -1,19 +1,10 @@
+import { HeroSection } from '@/features/hero';
+
 export default function HomePage() {
   return (
-    <div className="mx-auto max-w-6xl space-y-24 px-4 py-16 sm:px-6 lg:px-8">
+    <div className="mx-auto max-w-6xl space-y-24 px-4 py-8 sm:px-6 lg:px-8">
       {/* Hero Section */}
-      <section className="flex min-h-[50vh] flex-col items-start justify-center gap-4 pt-8">
-        <div className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-muted/50 px-3.5 py-1 text-xs text-muted-foreground">
-          <span>✨ Full Stack Web Developer &amp; UI Enthusiast</span>
-        </div>
-        <h1 className="font-heading text-4xl font-extrabold tracking-tight text-foreground sm:text-6xl">
-          Building thoughtful digital experiences.
-        </h1>
-        <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground">
-          Hello! I&apos;m Jakirul Islam Hakim. Welcome to my portfolio. স্বাগতম — English uses Inter
-          &amp; Manrope; Bangla automatically falls back to Hind Siliguri.
-        </p>
-      </section>
+      <HeroSection />
 
       {/* About Section */}
       <section

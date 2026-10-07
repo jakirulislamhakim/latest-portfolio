@@ -4,6 +4,19 @@ import { env } from './src/config/env';
 
 const nextConfig: NextConfig = {
   reactCompiler: true,
+  async headers() {
+    return [
+      {
+        source: '/favicon.ico',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=604800, stale-while-revalidate=2592000',
+          },
+        ],
+      },
+    ];
+  },
 };
 
 export default withSentryConfig(nextConfig, {
