@@ -59,24 +59,24 @@ export const HERO_TECH_BADGES = [
     id: 'typescript',
     name: 'TypeScript',
     src: '/images/hero-icon/typescript.jpg',
-    positionClassName: 'top-[32%] -left-12 md:top-[36%] md:-left-16',
+    positionClassName: 'top-[32%] -left-11 md:top-[36%] md:-left-14',
   },
   {
     id: 'nextjs',
     name: 'Next.js',
     src: '/images/hero-icon/nextjs.jpg',
-    positionClassName: '-top-10 left-[10%] md:-top-12 md:left-[10%]',
+    positionClassName: '-top-8 left-[10%] md:-top-10 md:left-[10%]',
   },
   {
     id: 'postgresql',
     name: 'PostgreSQL',
     src: '/images/hero-icon/postgreesql.jpg',
-    positionClassName: 'top-[32%] -right-12 md:top-[36%] md:-right-16',
+    positionClassName: 'top-[32%] -right-11 md:top-[36%] md:-right-14',
   },
   {
     id: 'express',
     name: 'Express.js',
     src: '/images/hero-icon/express-js.jpg',
-    positionClassName: '-top-10 right-[10%] md:-top-12 md:right-[10%]',
+    positionClassName: '-top-8 right-[10%] md:-top-10 md:right-[10%]',
   },
 ] as const satisfies readonly THeroTechBadge[];
