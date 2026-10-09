@@ -20,7 +20,7 @@ export function HeroVisual() {
             key={badge.id}
             aria-hidden="true"
             className={cn(
-              'absolute z-20 size-12 rounded-2xl border border-border/80 bg-card/90 p-1.5 shadow-lg backdrop-blur-md transition-transform duration-300 hover:scale-110 hover:shadow-md md:size-14 md:p-2',
+              'absolute z-20 size-10 rounded-md border border-border/80 bg-white p-1.5 shadow-lg backdrop-blur-md transition-transform duration-300 hover:scale-110 hover:shadow-md md:size-12 md:p-2',
               badge.positionClassName
             )}
           >

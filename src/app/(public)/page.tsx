@@ -1,4 +1,5 @@
 import { HeroSection } from '@/features/hero';
+import { SkillsSection } from '@/features/skills';
 
 export default function HomePage() {
   return (
@@ -19,19 +20,7 @@ export default function HomePage() {
         </p>
       </section>
 
-      {/* Skills Section */}
-      <section
-        id="skills"
-        className="flex min-h-[380px] scroll-mt-24 flex-col justify-center rounded-2xl border border-border/50 bg-card p-8 shadow-xs sm:p-12"
-      >
-        <h2 className="font-heading text-3xl font-bold tracking-tight">
-          Skills &amp; Technologies
-        </h2>
-        <p className="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">
-          Next.js, React, TypeScript, Tailwind CSS, Node.js, and modern UI component libraries.
-          Constantly refining development workflows with strict type safety and automated testing.
-        </p>
-      </section>
+      <SkillsSection />
 
       {/* Projects Section */}
       <section
