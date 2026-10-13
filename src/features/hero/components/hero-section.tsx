@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ArrowRight, Download } from 'lucide-react';
+import { SectionLayout } from '@/components/layout/section-layout';
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { HERO_CONTENT } from '../constants';
@@ -8,7 +9,7 @@ import { HeroVisual } from './hero-visual';
 
 export function HeroSection() {
   return (
-    <section id="hero" aria-labelledby="hero-heading" className="py-6 md:py-10 lg:py-20">
+    <SectionLayout id="hero" aria-labelledby="hero-heading" needTopPadding>
       <div className="grid w-full grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-8">
         {/* Left Column: Text and Actions */}
         <div className="order-2 flex flex-col items-start gap-6 lg:order-1 lg:col-span-7">
@@ -81,6 +82,6 @@ export function HeroSection() {
           <HeroVisual />
         </div>
       </div>
-    </section>
+    </SectionLayout>
   );
 }
