@@ -1,9 +1,10 @@
+import { SectionLayout } from '@/components/layout/section-layout';
 import { SKILL_CATEGORIES, SKILLS_CONTENT } from '../constants';
 import { SkillCategoryCard } from './skill-category-card';
 
 export function SkillsSection() {
   return (
-    <section id="skills" aria-labelledby="skills-heading" className="scroll-mt-24">
+    <SectionLayout id="skills" aria-labelledby="skills-heading">
       <div>
         <h2 id="skills-heading" className="mt-2 text-center">
           {SKILLS_CONTENT.heading}
@@ -18,6 +19,6 @@ export function SkillsSection() {
           <SkillCategoryCard key={category.id} category={category} />
         ))}
       </ul>
-    </section>
+    </SectionLayout>
   );
 }

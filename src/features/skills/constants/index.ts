@@ -4,7 +4,8 @@ import type { TSkillCategory } from '../types';
 export const SKILLS_CONTENT = {
   eyebrow: 'Toolkit',
   heading: 'Skills & Technologies',
-  intro: 'Languages, frontend, backend, and the tools I use to ship web applications.',
+  intro:
+    'The tools I use to design, build, and ship full-stack web apps, from interface to database',
 } as const;
 
 export const SKILL_CATEGORIES = [
@@ -19,9 +20,8 @@ export const SKILL_CATEGORIES = [
       { id: 'html5', name: 'HTML5' },
       { id: 'css3', name: 'CSS3' },
       { id: 'sql', name: 'SQL' },
-      { id: 'dsa', name: 'Data Structures & Algorithms' },
-      { id: 'contests', name: 'Codeforces / CodeChef / LeetCode' },
-      { id: 'problems-solved', name: '350+ problems solved' },
+      { id: 'dsa', name: 'Data Structures & Algorithms (Basic)' },
+      { id: 'yaml-json', name: 'YAML / JSON' },
     ],
   },
   {
