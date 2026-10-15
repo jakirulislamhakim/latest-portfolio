@@ -39,7 +39,7 @@ export function HeroSection() {
           </p>
 
           {/* Availability badge */}
-          <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-border/80 bg-muted/60 px-3.5 py-1.5 text-xs font-medium text-foreground shadow-xs backdrop-blur-xs md:mt-6">
+          <div className="mt-2 inline-flex items-center gap-2 rounded-md border border-border/80 bg-accent/80 px-3 py-1.5 text-xs font-medium text-foreground shadow-xs backdrop-blur-xs md:mt-4">
             <span className="relative flex size-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
               <span className="relative inline-flex size-2 rounded-full bg-primary" />
@@ -48,12 +48,12 @@ export function HeroSection() {
           </div>
 
           {/* Action CTAs */}
-          <div className="flex flex-wrap items-center gap-3 pt-2 md:gap-4">
+          <div className="flex flex-wrap items-center gap-2 pt-2 md:gap-4">
             <Link
               href={HERO_CONTENT.primaryCta.href}
               className={cn(
                 buttonVariants(),
-                'group rounded-xl bg-linear-to-r from-primary to-chart-2 px-5 text-sm font-semibold text-primary-foreground shadow-md shadow-primary/20 transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/30 md:px-6 md:text-base'
+                'group rounded-xl bg-linear-to-r from-primary to-chart-2 px-4 text-sm font-semibold text-primary-foreground shadow-md shadow-primary/20 transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/30 md:px-6 md:text-base'
               )}
             >
               <span>{HERO_CONTENT.primaryCta.label}</span>
