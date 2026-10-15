@@ -14,6 +14,8 @@ export const serverEnv = createEnv({
     SENTRY_PROJECT: z.string().min(1),
     SENTRY_AUTH_TOKEN: z.string().min(1),
     SENTRY_DSN: z.string().url().optional(),
+    // Cannot be named GITHUB_* — GitHub Actions rejects that secret-name prefix.
+    GH_ACTIVITY_TOKEN: z.string().min(5),
   },
 
   // Next.js >= 13.4.4: pass full process.env for server-side vars
