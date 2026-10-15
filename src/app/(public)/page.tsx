@@ -1,7 +1,9 @@
+import { Suspense } from 'react';
 import { SectionLayout } from '@/components/layout/section-layout';
 import { AboutSection } from '@/features/about';
 import { HeroSection } from '@/features/hero';
 import { SkillsSection } from '@/features/skills';
+import { GithubActivitySection, GithubActivitySkeleton } from '@/features/github';
 
 export default function HomePage() {
   return (
@@ -9,6 +11,9 @@ export default function HomePage() {
       <HeroSection />
       <AboutSection />
       <SkillsSection />
+      <Suspense fallback={<GithubActivitySkeleton />}>
+        <GithubActivitySection />
+      </Suspense>
 
       <SectionLayout id="projects" aria-labelledby="projects-heading">
         <h2 id="projects-heading">Featured Projects</h2>

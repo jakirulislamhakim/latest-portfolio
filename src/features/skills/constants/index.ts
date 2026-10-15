@@ -21,7 +21,6 @@ export const SKILL_CATEGORIES = [
       { id: 'css3', name: 'CSS3' },
       { id: 'sql', name: 'SQL' },
       { id: 'dsa', name: 'Data Structures & Algorithms (Basic)' },
-      { id: 'yaml-json', name: 'YAML / JSON' },
     ],
   },
   {
@@ -65,9 +64,9 @@ export const SKILL_CATEGORIES = [
     name: 'Tools & DevOps',
     icon: Wrench,
     skills: [
-      { id: 'git', name: 'Git / GitHub' },
+      { id: 'git', name: 'Git / GitHub / Action' },
       { id: 'package-managers', name: 'pnpm / npm' },
-      { id: 'hosting', name: 'Vercel / Render' },
+      { id: 'hosting', name: 'Vercel / Render / Railway' },
       { id: 'sentry', name: 'Sentry' },
       { id: 'eslint', name: 'ESLint' },
       { id: 'devtools', name: 'Chrome DevTools' },

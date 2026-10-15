@@ -138,6 +138,8 @@ jobs:
       SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
       SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
       NEXT_PUBLIC_SENTRY_DSN: ${{ secrets.NEXT_PUBLIC_SENTRY_DSN }}
+      # PAT for the contribution calendar. Name cannot start with GITHUB_.
+      GH_ACTIVITY_TOKEN: ${{ secrets.GH_ACTIVITY_TOKEN }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
