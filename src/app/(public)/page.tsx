@@ -4,6 +4,7 @@ import { AboutSection } from '@/features/about';
 import { HeroSection } from '@/features/hero';
 import { SkillsSection } from '@/features/skills';
 import { GithubActivitySection, GithubActivitySkeleton } from '@/features/github';
+import { TerminalSection } from '@/features/terminal';
 
 export default function HomePage() {
   return (
@@ -14,6 +15,7 @@ export default function HomePage() {
       <Suspense fallback={<GithubActivitySkeleton />}>
         <GithubActivitySection />
       </Suspense>
+      <TerminalSection />
 
       <SectionLayout id="projects" aria-labelledby="projects-heading">
         <h2 id="projects-heading">Featured Projects</h2>
