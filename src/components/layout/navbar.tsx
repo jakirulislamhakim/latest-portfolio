@@ -5,23 +5,8 @@ import Link from 'next/link';
 import { ArrowUpRight, Menu, X } from 'lucide-react';
 import { buttonVariants } from '@/components/ui/button';
 import { ThemeToggle } from '@/components/shared/theme-toggle';
+import { NAV_ITEMS, SITE } from '@/config/site';
 import { cn } from '@/lib/utils';
-
-interface NavItem {
-  label: string;
-  href: string;
-}
-
-const NAV_ITEMS: NavItem[] = [
-  { label: 'About', href: '#about' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Activity', href: '#activity' },
-  { label: 'Terminal', href: '#terminal' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Services', href: '#services' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Contact', href: '#contact' },
-];
 
 export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -62,11 +47,11 @@ export function Navbar() {
           className="group flex items-center gap-2.5 text-foreground transition-opacity hover:opacity-90"
         >
           <span className="flex size-9 items-center justify-center rounded-lg bg-primary text-sm font-bold text-primary-foreground shadow-xs transition-transform duration-200 group-hover:scale-105">
-            JH
+            {SITE.shortName}
           </span>
           <div className="flex flex-col">
             <span className="font-heading text-sm font-semibold tracking-tight text-foreground sm:text-base">
-              Jakirul Islam
+              {SITE.name}
             </span>
             <div className="flex items-center gap-1.5 text-[11px] text-muted-foreground">
               <span className="relative flex size-2">
