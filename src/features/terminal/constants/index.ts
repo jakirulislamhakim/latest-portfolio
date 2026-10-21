@@ -86,6 +86,7 @@ export const TERMINAL_GOTO_TARGETS = [
   { id: 'activity', label: 'GitHub activity' },
   { id: 'terminal', label: 'Terminal' },
   { id: 'projects', label: 'Projects' },
+  { id: 'services', label: 'Services' },
   { id: 'experience', label: 'Experience' },
   { id: 'contact', label: 'Contact' },
 ] as const satisfies readonly TTerminalGotoTarget[];

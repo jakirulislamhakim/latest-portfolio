@@ -141,6 +141,28 @@
   * {
     @apply border-border;
   }
+  ::selection {
+    background-color: color-mix(in oklch, var(--primary) 35%, transparent);
+    color: var(--foreground);
+  }
+  ::-moz-selection {
+    background-color: color-mix(in oklch, var(--primary) 35%, transparent);
+    color: var(--foreground);
+  }
+
+  ::-webkit-scrollbar {
+    width: 18px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    border-radius: var(--radius-md);
+    border: 4px solid transparent;
+    background-clip: padding-box;
+  }
+
   :focus-visible {
     outline: 2px solid var(--ring);
     outline-offset: 2px;
