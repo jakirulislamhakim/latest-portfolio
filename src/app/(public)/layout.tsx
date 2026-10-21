@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Navbar } from '@/components/layout/navbar';
+import { Footer } from '@/components/layout/footer';
 import { ThemeProvider } from '@/providers';
 import { fontVariables } from '@/lib/fonts';
 import '@/app/globals.css';
@@ -29,6 +30,7 @@ export default function RootLayout({
         >
           <Navbar />
           <main className="flex-1">{children}</main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

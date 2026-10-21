@@ -1,4 +1,5 @@
-import type { THeroCodeSnippet, THeroSocialLink, THeroTechBadge } from '../types';
+import { SOCIAL_LINKS } from '@/config/site';
+import type { THeroCodeSnippet, THeroTechBadge } from '../types';
 
 export const HERO_CONTENT = {
   greeting: "Hi, I'm",
@@ -27,32 +28,7 @@ export const HERO_CODE_SNIPPET = {
   ],
 } as const satisfies THeroCodeSnippet;
 
-export const HERO_SOCIAL_LINKS = [
-  {
-    id: 'github',
-    name: 'GitHub',
-    href: 'https://github.com/jakirulislamhakim',
-    ariaLabel: 'Visit my GitHub profile',
-  },
-  {
-    id: 'linkedin',
-    name: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/jakirulislamhakim/',
-    ariaLabel: 'Visit my LinkedIn profile',
-  },
-  {
-    id: 'facebook',
-    name: 'Facebook',
-    href: 'https://www.facebook.com/jakirulIslamHakim1',
-    ariaLabel: 'Visit my Facebook profile',
-  },
-  {
-    id: 'email',
-    name: 'Email',
-    href: 'mailto:contact@example.com',
-    ariaLabel: 'Send an email to Jakirul Islam Hakim',
-  },
-] as const satisfies readonly THeroSocialLink[];
+export const HERO_SOCIAL_LINKS = SOCIAL_LINKS;
 
 export const HERO_TECH_BADGES = [
   {
