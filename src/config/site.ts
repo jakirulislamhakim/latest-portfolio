@@ -17,6 +17,8 @@ export const SITE = {
   role: 'Full Stack Developer',
   statusLine: 'Built with Next.js',
   timezone: 'Asia/Dhaka',
+  cvHref: '/cv.pdf',
+  phone: '+8801736100945',
 } as const;
 
 export const FOOTER_CONTENT = {
