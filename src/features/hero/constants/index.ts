@@ -1,4 +1,4 @@
-import { SOCIAL_LINKS } from '@/config/site';
+import { SITE, SOCIAL_LINKS } from '@/config/site';
 import type { THeroCodeSnippet, THeroTechBadge } from '../types';
 
 export const HERO_CONTENT = {
@@ -13,7 +13,7 @@ export const HERO_CONTENT = {
   },
   secondaryCta: {
     label: 'Download CV',
-    href: '/cv.pdf',
+    href: SITE.cvHref,
   },
   socialsLabel: 'Follow Me',
 } as const;

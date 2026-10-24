@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { SectionLayout } from '@/components/layout/section-layout';
+import { PillList } from '@/components/shared/pill-list';
 import { SERVICE_TAGS, SERVICES_CONTENT, SERVICES_IMAGE } from '../constants';
-import { ServiceTagList } from './service-tag-list';
 
 export function ServicesSection() {
   return (
@@ -29,7 +29,7 @@ export function ServicesSection() {
               {SERVICES_CONTENT.pitch}
             </p>
 
-            <ServiceTagList tags={SERVICE_TAGS} />
+            <PillList className="justify-center" items={SERVICE_TAGS} label="Service categories" />
 
             <p className="rounded-lg border border-border/40 bg-muted/40 p-4 text-justify text-base leading-relaxed text-foreground md:p-5">
               {SERVICES_CONTENT.description}
