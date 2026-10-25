@@ -16,6 +16,9 @@ export const serverEnv = createEnv({
     SENTRY_DSN: z.string().url().optional(),
     // Cannot be named GITHUB_* — GitHub Actions rejects that secret-name prefix.
     GH_ACTIVITY_TOKEN: z.string().min(5),
+    // Gmail address and app password used to send the contact form.
+    GMAIL_USER: z.string().min(1),
+    GMAIL_APP_PASSWORD: z.string().min(1),
   },
 
   // Next.js >= 13.4.4: pass full process.env for server-side vars

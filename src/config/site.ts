@@ -11,14 +11,16 @@ export type TSocialLink = {
 };
 
 export const SITE = {
-  name: 'Jakirul Islam',
+  name: 'JAKIRUL ISLAM',
   fullName: 'Jakirul Islam Hakim',
   shortName: 'JIH',
   role: 'Full Stack Developer',
+  headerSlogan: ['TakeRisk', 'HaveFun'],
   statusLine: 'Built with Next.js',
   timezone: 'Asia/Dhaka',
   cvHref: '/cv.pdf',
   phone: '+8801736100945',
+  url: 'https://jakirul-islam-hakim.vercel.app/',
 } as const;
 
 export const FOOTER_CONTENT = {
