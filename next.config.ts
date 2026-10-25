@@ -4,6 +4,20 @@ import { env } from './src/config/env';
 
 const nextConfig: NextConfig = {
   reactCompiler: true,
+  // Nodemailer uses Node's network stack. Leave it out of the client bundle.
+  serverExternalPackages: ['nodemailer'],
+  // The Dev Tunnel forwards the action with its own host while the page origin stays localhost.
+  // Next.js rejects that mismatch. Allow it only while developing.
+  ...(env.NODE_ENV === 'development'
+    ? {
+        allowedDevOrigins: ['**.devtunnels.ms'],
+        experimental: {
+          serverActions: {
+            allowedOrigins: ['localhost:3000'],
+          },
+        },
+      }
+    : {}),
   async headers() {
     return [
       {

@@ -24,3 +24,8 @@ export type TContactStep = {
   number: string;
   label: string;
 };
+
+export type TContactFieldErrors = Partial<Record<'name' | 'email' | 'message', string>>;
+
+export type TSendContactEmailResult =
+  { ok: true } | { ok: false; fieldErrors: TContactFieldErrors } | { ok: false; message: string };

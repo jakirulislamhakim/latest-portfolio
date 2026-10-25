@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ArrowUp, ArrowUpRight, ChevronRight } from 'lucide-react';
+import { BrandMark } from '@/components/layout/brand-mark';
 import { FooterLocalTime } from '@/components/layout/footer-local-time';
 import { SocialIcon } from '@/components/shared/social-icon';
 import { buttonVariants } from '@/components/ui/button';
@@ -42,11 +43,9 @@ export function Footer() {
           <div className="flex max-w-md flex-col gap-4">
             <Link
               href="/"
-              className="group flex items-center gap-2.5 text-foreground transition-opacity hover:opacity-90"
+              className="group flex items-center gap-1 text-foreground transition-opacity hover:opacity-90"
             >
-              <span className="flex size-9 items-center justify-center rounded-lg bg-primary text-sm font-bold text-primary-foreground shadow-xs transition-transform duration-200 group-hover:scale-105">
-                {SITE.shortName}
-              </span>
+              <BrandMark />
               <div className="flex flex-col">
                 <span className="font-heading text-sm font-semibold tracking-tight text-foreground md:text-base">
                   {SITE.name}

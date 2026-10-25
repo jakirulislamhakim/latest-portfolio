@@ -21,7 +21,7 @@ export const HERO_CONTENT = {
 export const HERO_CODE_SNIPPET = {
   variableName: 'developer',
   properties: [
-    { key: 'name', value: '"Hakim"' },
+    { key: 'name', value: '"Jakirul Islam Hakim"' },
     { key: 'passion', value: '"Building amazing web apps"' },
     { key: 'stack', value: '["MERN", "TypeScript", "Next.js"]' },
     { key: 'focus', value: '"Clean Code & Great UX"' },

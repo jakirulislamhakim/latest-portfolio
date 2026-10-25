@@ -37,7 +37,7 @@ export const CONTACT_CONTENT = {
 
 export const CONTACT_STATUS = [
   { id: 'available', label: 'Available for work' },
-  { id: 'reply', label: 'Replies within 24 hours' },
+  { id: 'reply', label: 'Replies within 24-48 hours' },
   { id: 'location', label: `Bangladesh, ${SITE.timezone}` },
 ] as const satisfies readonly TContactStatusItem[];
 
@@ -101,8 +101,9 @@ export const CONTACT_ACTIONS = [
 
 export const CONTACT_FORM = {
   heading: 'Send a note',
-  description:
-    'For a role or a project. Sending opens your email app so you can review the note before it goes out.',
+  description: 'For a role or a project. I will reply within 24-48 hours.',
+  sendingLabel: 'Sending...',
+  sendError: 'The message could not be sent. Please use the email link, or try again.',
   nameLabel: 'Name',
   namePlaceholder: 'Your name',
   emailLabel: 'Email',
@@ -110,7 +111,10 @@ export const CONTACT_FORM = {
   messageLabel: 'Message',
   messagePlaceholder: 'Role or project — what should we talk about?',
   submitLabel: 'Send message',
-  successNote: 'Your message has been sent. I will reply within 24 hours.',
+  successTitle: 'Thank you',
+  successNote: "We've received your message. Our team will get back to you within 24-48 hours.",
+  dismissSuccessLabel: 'Dismiss message',
+  successDurationMs: 6000,
   nameError: 'Name must be at least 2 characters.',
   emailError: 'Enter a valid email address.',
   messageError: 'Message must be at least 15 characters.',
@@ -118,6 +122,6 @@ export const CONTACT_FORM = {
 
 export const CONTACT_STEPS = [
   { id: 'send', number: '1', label: 'You send a note' },
-  { id: 'reply', number: '2', label: 'I reply within 24 hours' },
+  { id: 'reply', number: '2', label: 'I reply within 24-48 hours' },
   { id: 'talk', number: '3', label: 'We talk about the role or the project' },
 ] as const satisfies readonly TContactStep[];
