@@ -4,6 +4,7 @@ import { AboutSection } from '@/features/about';
 import { HeroSection } from '@/features/hero';
 import { SkillsSection } from '@/features/skills';
 import { GithubActivitySection, GithubActivitySkeleton } from '@/features/github';
+import { ContactSection } from '@/features/contact';
 import { ServicesSection } from '@/features/services';
 import { TerminalSection } from '@/features/terminal';
 
@@ -35,13 +36,7 @@ export default function HomePage() {
         </p>
       </SectionLayout>
 
-      <SectionLayout id="contact" aria-labelledby="contact-heading">
-        <h2 id="contact-heading">Get In Touch</h2>
-        <p className="mt-3 max-w-prose text-base leading-relaxed text-muted-foreground">
-          Have an exciting project in mind or looking for a dedicated developer? Feel free to send a
-          message or connect through social links.
-        </p>
-      </SectionLayout>
+      <ContactSection />
     </>
   );
 }

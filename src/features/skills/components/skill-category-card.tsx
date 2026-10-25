@@ -1,12 +1,5 @@
-import type { TSkill, TSkillCategory } from '../types';
-
-type TSkillListItemProps = {
-  skill: TSkill;
-};
-
-function SkillListItem({ skill }: TSkillListItemProps) {
-  return <li className="text-sm leading-relaxed text-foreground md:text-base">{skill.name}</li>;
-}
+import { PillList } from '@/components/shared/pill-list';
+import type { TSkillCategory } from '../types';
 
 type TSkillCategoryCardProps = {
   category: TSkillCategory;
@@ -14,6 +7,10 @@ type TSkillCategoryCardProps = {
 
 export function SkillCategoryCard({ category }: TSkillCategoryCardProps) {
   const Icon = category.icon;
+  const skills = category.skills.map((skill) => ({
+    id: skill.id,
+    label: skill.name,
+  }));
 
   return (
     <li className="rounded-sm border border-border/50 bg-card p-4 shadow-xs md:p-5">
@@ -23,11 +20,7 @@ export function SkillCategoryCard({ category }: TSkillCategoryCardProps) {
         </span>
         <h3>{category.name}</h3>
       </div>
-      <ul className="mt-3 list-disc space-y-1.5 pl-4 marker:text-primary">
-        {category.skills.map((skill) => (
-          <SkillListItem key={skill.id} skill={skill} />
-        ))}
-      </ul>
+      <PillList className="mt-3 justify-start" items={skills} label={`${category.name} skills`} />
     </li>
   );
 }

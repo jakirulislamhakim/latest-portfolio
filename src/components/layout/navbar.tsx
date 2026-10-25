@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { ArrowUpRight, Menu, X } from 'lucide-react';
+import { BrandMark } from '@/components/layout/brand-mark';
 import { buttonVariants } from '@/components/ui/button';
 import { ThemeToggle } from '@/components/shared/theme-toggle';
 import { NAV_ITEMS, SITE } from '@/config/site';
@@ -44,22 +45,14 @@ export function Navbar() {
         {/* Brand / Logo */}
         <Link
           href="/"
-          className="group flex items-center gap-2.5 text-foreground transition-opacity hover:opacity-90"
+          className="group flex items-center gap-1 text-foreground transition-opacity hover:opacity-90"
         >
-          <span className="flex size-9 items-center justify-center rounded-lg bg-primary text-sm font-bold text-primary-foreground shadow-xs transition-transform duration-200 group-hover:scale-105">
-            {SITE.shortName}
-          </span>
+          <BrandMark priority />
           <div className="flex flex-col">
             <span className="font-heading text-sm font-semibold tracking-tight text-foreground sm:text-base">
               {SITE.name}
             </span>
-            <div className="flex items-center gap-1.5 text-[11px] text-muted-foreground">
-              <span className="relative flex size-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex size-2 rounded-full bg-emerald-500" />
-              </span>
-              <span>Available for work</span>
-            </div>
+            <span className="text-xs text-muted-foreground">{SITE.role}</span>
           </div>
         </Link>
 

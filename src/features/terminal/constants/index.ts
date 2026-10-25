@@ -74,7 +74,7 @@ export const TERMINAL_SOCIAL_LINKS = [
   {
     id: 'email',
     name: 'Email',
-    href: 'mailto:contact@example.com',
+    href: 'mailto:jakirulislamhakim@gmail.com',
   },
 ] as const satisfies readonly TTerminalSocialLink[];
 

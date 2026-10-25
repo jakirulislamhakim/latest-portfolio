@@ -1,4 +1,4 @@
-import { SOCIAL_LINKS } from '@/config/site';
+import { SITE, SOCIAL_LINKS } from '@/config/site';
 import type { THeroCodeSnippet, THeroTechBadge } from '../types';
 
 export const HERO_CONTENT = {
@@ -13,7 +13,7 @@ export const HERO_CONTENT = {
   },
   secondaryCta: {
     label: 'Download CV',
-    href: '/cv.pdf',
+    href: SITE.cvHref,
   },
   socialsLabel: 'Follow Me',
 } as const;
@@ -21,7 +21,7 @@ export const HERO_CONTENT = {
 export const HERO_CODE_SNIPPET = {
   variableName: 'developer',
   properties: [
-    { key: 'name', value: '"Hakim"' },
+    { key: 'name', value: '"Jakirul Islam Hakim"' },
     { key: 'passion', value: '"Building amazing web apps"' },
     { key: 'stack', value: '["MERN", "TypeScript", "Next.js"]' },
     { key: 'focus', value: '"Clean Code & Great UX"' },
