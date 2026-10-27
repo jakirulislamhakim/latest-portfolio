@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight, Download } from 'lucide-react';
+import { ArrowRight, Download, MapPin } from 'lucide-react';
 import { SectionLayout } from '@/components/layout/section-layout';
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
@@ -38,13 +38,9 @@ export function HeroSection() {
             {HERO_CONTENT.bio}
           </p>
 
-          {/* Availability badge */}
-          <div className="mt-2 inline-flex items-center gap-2 rounded-md border border-border/80 bg-accent/80 px-3 py-1.5 text-xs font-medium text-foreground shadow-xs backdrop-blur-xs md:mt-4">
-            <span className="relative flex size-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
-              <span className="relative inline-flex size-2 rounded-full bg-primary" />
-            </span>
-            <span>{HERO_CONTENT.badge}</span>
+          <div className="mt-2 hidden items-center gap-2 rounded-md border border-border/80 bg-accent/80 px-3 py-1.5 text-xs font-medium text-foreground shadow-xs backdrop-blur-xs md:mt-4 md:inline-flex">
+            <MapPin className="size-3.5 text-primary" aria-hidden="true" />
+            <span>{HERO_CONTENT.location}</span>
           </div>
 
           {/* Action CTAs */}

@@ -5,6 +5,7 @@ import { HeroSection } from '@/features/hero';
 import { SkillsSection } from '@/features/skills';
 import { GithubActivitySection, GithubActivitySkeleton } from '@/features/github';
 import { ContactSection } from '@/features/contact';
+import { ExperienceSection } from '@/features/experience';
 import { ServicesSection } from '@/features/services';
 import { TerminalSection } from '@/features/terminal';
 
@@ -28,13 +29,7 @@ export default function HomePage() {
         </p>
       </SectionLayout>
 
-      <SectionLayout id="experience" aria-labelledby="experience-heading">
-        <h2 id="experience-heading">Work Experience</h2>
-        <p className="mt-3 max-w-prose text-base leading-relaxed text-muted-foreground">
-          Detailed career history, key projects delivered, and technical contributions across
-          engineering teams.
-        </p>
-      </SectionLayout>
+      <ExperienceSection />
 
       <ContactSection />
     </>

@@ -6,6 +6,7 @@ export const HERO_CONTENT = {
   name: 'Jakirul Islam Hakim',
   bio: 'Passionate Full Stack Developer with expertise in MERN stack. I love building modern, scalable, user-friendly, high-performance web applications that solve real-world problems.',
   badge: 'Available for work',
+  location: 'Dhaka, Bangladesh',
   designations: 'Software Developer',
   primaryCta: {
     label: 'View My Work',
@@ -25,6 +26,7 @@ export const HERO_CODE_SNIPPET = {
     { key: 'passion', value: '"Building amazing web apps"' },
     { key: 'stack', value: '["MERN", "TypeScript", "Next.js"]' },
     { key: 'focus', value: '"Clean Code & Great UX"' },
+    { key: 'status', value: '"Open to Work"' },
   ],
 } as const satisfies THeroCodeSnippet;
 
