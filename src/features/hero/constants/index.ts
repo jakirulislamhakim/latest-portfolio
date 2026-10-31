@@ -10,7 +10,7 @@ export const HERO_CONTENT = {
   designations: 'Software Developer',
   primaryCta: {
     label: 'View My Work',
-    href: '#projects',
+    href: '/#projects',
   },
   secondaryCta: {
     label: 'Download CV',

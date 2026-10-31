@@ -7,6 +7,10 @@ export const SERVICES_CONTENT = {
     'I help clients ship full products without needing to hire separate frontend and backend specialists. By working with one full-stack developer, you benefit from clearer ownership and save 3–4x compared to hiring for separate roles.',
   description:
     'I help turn your ideas into useful, modern web applications that fit your business needs. From business websites and online stores to marketplaces, dashboards, and custom business software, I build solutions that make your work easier. Whether you want to start a new project, improve your existing website, or manage your business more efficiently, I can help with everything from the user interface to the backend and database. I focus on clean code, good performance, easy-to-use designs, and reliable functionality. I also build websites in both Bangla and English to help you reach more people',
+  ctaIntro: 'Have a product idea or an existing site to improve? Tell me what you need.',
+  ctaLabel: 'Talk about your project',
+  ctaHref: '/#contact',
+  ctaAriaLabel: 'Contact me to talk about a web development project',
 } as const;
 
 export const SERVICES_IMAGE = {
