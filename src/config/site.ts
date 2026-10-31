@@ -3,6 +3,11 @@ export type TNavItem = {
   href: string;
 };
 
+/** Optional primary link (e.g. Blog) — only rendered when `enabled` is true. */
+export type TNavItemOptional = TNavItem & {
+  enabled: boolean;
+};
+
 export type TSocialLink = {
   id: string;
   name: string;
@@ -27,23 +32,50 @@ export const FOOTER_CONTENT = {
   pitch:
     'Got an idea stuck in your head? I help turn rough concepts into real, working web apps — clear ownership, clean code, and a smooth path from first chat to launch. Ready when you are.',
   ctaLabel: "Let's Talk",
-  ctaHref: '#contact',
+  ctaHref: '/#contact',
   navHeading: 'Explore',
   socialHeading: 'Connect',
   socialHook:
     'Not ready for a full project talk? No pressure — say hi on any of these. Even a short hello is welcome.',
 } as const;
 
+/**
+ * Full explore list (footer + mobile sheet + scroll-spy).
+ * Home section links use `/#…` so they work from any route (e.g. project detail).
+ */
 export const NAV_ITEMS = [
-  { label: 'About', href: '#about' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Activity', href: '#activity' },
-  { label: 'Terminal', href: '#terminal' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Services', href: '#services' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'About', href: '/#about' },
+  { label: 'Skills', href: '/#skills' },
+  { label: 'Activity', href: '/#activity' },
+  { label: 'Terminal', href: '/#terminal' },
+  { label: 'Projects', href: '/#projects' },
+  { label: 'Services', href: '/#services' },
+  { label: 'Experience', href: '/#experience' },
+  { label: 'Contact', href: '/#contact' },
 ] as const satisfies readonly TNavItem[];
+
+function pickNavItems(hrefs: readonly string[]): TNavItem[] {
+  return hrefs.map((href) => {
+    const item = NAV_ITEMS.find((navItem) => navItem.href === href);
+    if (!item) {
+      throw new Error(`Missing nav item for href: ${href}`);
+    }
+    return item;
+  });
+}
+
+/** Desktop primary row — short list so tablet does not overflow. */
+export const NAV_PRIMARY_ITEMS = pickNavItems([
+  '/#about',
+  '/#projects',
+  '/#services',
+  '/#experience',
+]);
+
+/** Desktop “More” menu — secondary sections. */
+export const NAV_MORE_ITEMS = pickNavItems(['/#skills', '/#activity', '/#terminal', '/#contact']);
+
+export const NAV_MORE_LABEL = 'More';
 
 export const SOCIAL_LINKS = [
   {
