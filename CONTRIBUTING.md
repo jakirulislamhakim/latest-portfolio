@@ -103,8 +103,10 @@ When opening a Pull Request:
 
 ## 4. Code Style & Standards
 
+Full conventions (naming, TypeScript, React/Next, styling, a11y): **[docs/coding-patterns.md](./docs/coding-patterns.md)**.
+
 - **Imports**: Always use the `@/*` alias for internal paths (`@/components/...`, `@/lib/...`).
-- **Types**: Use explicit type imports: `import type { ComponentProps } from 'react'`.
+- **Types**: Use explicit type imports: `import type { ComponentProps } from 'react'`. Prefer the `T` prefix for project types (`TProject`).
 - **Variables**: Prefix intentionally unused variables with an underscore (e.g., `_event`).
 - **Formatting**: Enforced via Prettier — avoid manual reformatting outside project rules.
 - **Logging**: Never leave `console.log` in production code; use `console.warn` or `console.error` only when necessary.

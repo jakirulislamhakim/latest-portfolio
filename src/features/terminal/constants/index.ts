@@ -51,8 +51,12 @@ export const TERMINAL_SKILL_LINES = [
 ] as const;
 
 export const TERMINAL_PROJECT_LINES = [
-  'Featured projects are coming soon.',
-  'Type "goto projects" to jump to that section.',
+  'Featured projects:',
+  '  Sports Facility Booking  → /projects/sports-facility-booking',
+  '  Online Nursery           → /projects/online-nursery',
+  '  Library Management       → /projects/library-management',
+  '',
+  'Type "goto projects" to jump to the projects section.',
 ] as const;
 
 export const TERMINAL_SOCIAL_LINKS = [

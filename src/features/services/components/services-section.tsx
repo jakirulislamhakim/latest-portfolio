@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { SectionLayout } from '@/components/layout/section-layout';
 import { PillList } from '@/components/shared/pill-list';
 import { SERVICE_TAGS, SERVICES_CONTENT, SERVICES_IMAGE } from '../constants';
+import { ServicesCta } from './services-cta';
 
 export function ServicesSection() {
   return (
@@ -36,6 +37,8 @@ export function ServicesSection() {
             </p>
           </div>
         </div>
+
+        <ServicesCta />
       </div>
     </SectionLayout>
   );

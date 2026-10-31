@@ -92,7 +92,7 @@ export const CONTACT_ACTIONS = [
   {
     id: 'services',
     label: 'See services',
-    href: '#services',
+    href: '/#services',
     kind: 'internal',
     tone: 'secondary',
     icon: 'services',
