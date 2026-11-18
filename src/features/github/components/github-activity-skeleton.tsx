@@ -30,8 +30,11 @@ export function GithubActivitySkeleton() {
           </li>
         ))}
       </ul>
-      <div aria-hidden="true" className="mt-8 max-w-full overflow-x-auto">
-        <div className="flex w-max gap-2">
+      <div
+        aria-hidden="true"
+        className="mt-8 max-w-full overflow-x-auto [direction:rtl] lg:[direction:ltr]"
+      >
+        <div className="flex w-max gap-2 [direction:ltr]">
           <div className="flex w-8 shrink-0 flex-col">
             <span className="mb-1 h-3" />
             <div className="flex flex-col gap-0.5">

@@ -18,7 +18,7 @@ type TFooterNavLinkProps = {
 
 function FooterNavLink({ item }: TFooterNavLinkProps) {
   return (
-    <Link
+    <a
       href={item.href}
       className="group inline-flex min-h-11 items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-primary focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
     >
@@ -27,7 +27,7 @@ function FooterNavLink({ item }: TFooterNavLinkProps) {
         aria-hidden="true"
       />
       <span>{item.label}</span>
-    </Link>
+    </a>
   );
 }
 
@@ -41,30 +41,30 @@ export function Footer() {
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1.4fr)_auto_minmax(0,0.9fr)] lg:items-start lg:gap-12 xl:gap-16">
           {/* Brand + pitch + CTA */}
           <div className="flex max-w-md flex-col gap-4">
-            <Link
-              href="/"
+            <a
+              href="#hero"
               className="group flex items-center gap-1 text-foreground transition-opacity hover:opacity-90"
             >
               <BrandMark />
               <div className="flex flex-col">
-                <span className="font-heading text-sm font-semibold tracking-tight text-foreground md:text-base">
+                <span className="font-heading text-sm font-semibold tracking-tight text-foreground text-primary md:text-base">
                   {SITE.name}
                 </span>
                 <span className="text-xs text-muted-foreground">{SITE.role}</span>
               </div>
-            </Link>
+            </a>
 
             <p className="text-sm leading-relaxed text-muted-foreground md:text-base">
               {FOOTER_CONTENT.pitch}
             </p>
 
-            <Link
+            <a
               href={FOOTER_CONTENT.ctaHref}
               className={cn(buttonVariants({ size: 'default' }), 'w-fit gap-1.5')}
             >
               <span>{FOOTER_CONTENT.ctaLabel}</span>
               <ArrowUpRight className="size-3.5" />
-            </Link>
+            </a>
           </div>
 
           {/* Explore + 2 link columns */}
@@ -129,13 +129,13 @@ export function Footer() {
         <div className="mt-12 grid grid-cols-[1fr_auto] items-center gap-x-4 gap-y-4 border-t border-border/60 pt-6 text-xs text-muted-foreground md:grid-cols-3">
           <FooterLocalTime className="md:justify-self-start" />
 
-          <Link
+          <a
             href="#hero"
             aria-label="Back to top"
             className="col-start-2 row-start-1 flex size-11 shrink-0 items-center justify-center justify-self-end rounded-lg border border-border/70 bg-card text-muted-foreground shadow-xs transition-colors hover:border-primary/50 hover:bg-muted hover:text-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none md:col-start-3"
           >
             <ArrowUp className="size-6 text-primary" aria-hidden="true" />
-          </Link>
+          </a>
 
           <p className="col-span-2 row-start-2 min-w-0 md:col-span-1 md:col-start-2 md:row-start-1 md:justify-self-center md:text-center">
             © {year}{' '}

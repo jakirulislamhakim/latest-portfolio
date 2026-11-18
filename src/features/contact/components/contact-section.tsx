@@ -15,7 +15,7 @@ export function ContactSection() {
   return (
     <SectionLayout id="contact" aria-labelledby="contact-heading">
       {/* Heading and intro */}
-      <div className="text-center">
+      <div data-aos="fade-up" suppressHydrationWarning className="text-center">
         <h2 id="contact-heading">{CONTACT_CONTENT.heading}</h2>
         <p className="mx-auto mt-3 max-w-prose text-base leading-relaxed text-muted-foreground">
           {CONTACT_CONTENT.intro}
@@ -32,7 +32,11 @@ export function ContactSection() {
       <div className="mt-8 rounded-lg p-3 md:p-4">
         <div className="grid items-stretch gap-3 lg:grid-cols-2">
           {/* Contact panel */}
-          <div className="flex flex-col justify-start gap-4 rounded-lg border border-border p-5 text-center md:p-6">
+          <div
+            data-aos="fade-up"
+            suppressHydrationWarning
+            className="flex flex-col justify-start gap-4 rounded-lg border border-border p-5 text-center md:p-6"
+          >
             <a
               href={CONTACT_PANEL.href}
               className="group flex flex-col gap-2 rounded-lg text-start outline-none focus-visible:ring-2 focus-visible:ring-ring"
@@ -49,7 +53,11 @@ export function ContactSection() {
           </div>
 
           {/* Contact form */}
-          <div className="rounded-lg border border-border p-5 md:p-6">
+          <div
+            data-aos="fade-up"
+            suppressHydrationWarning
+            className="rounded-lg border border-border p-5 md:p-6"
+          >
             <h3 className="text-start">{CONTACT_FORM.heading}</h3>
             <p className="mt-2 text-start text-base leading-relaxed text-muted-foreground">
               {CONTACT_FORM.description}

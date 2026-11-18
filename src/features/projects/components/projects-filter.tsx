@@ -40,6 +40,8 @@ function ProjectsFilterButton({ filterId, label, isActive, onSelect }: TProjects
 export function ProjectsFilter({ value, onChange }: TProjectsFilterProps) {
   return (
     <div
+      data-aos="fade-up"
+      suppressHydrationWarning
       role="group"
       aria-label={PROJECTS_CONTENT.filterLabel}
       className="mx-auto flex w-full max-w-xl flex-wrap items-center justify-center gap-1 border-b border-border pb-px"

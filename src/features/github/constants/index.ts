@@ -51,7 +51,7 @@ export const CONTRIBUTION_DAY_ROWS = [
 ] as const;
 
 export const GITHUB_ACTIVITY_STATS = [
-  { id: 'contributions', label: 'Contributions', unit: '' },
-  { id: 'current-streak', label: 'Current streak', unit: 'days' },
-  { id: 'longest-streak', label: 'Longest streak', unit: 'days' },
+  { id: 'contributions', label: 'Contributions', unit: '', aos: 'fade-left' },
+  { id: 'current-streak', label: 'Current streak', unit: 'days', aos: undefined },
+  { id: 'longest-streak', label: 'Longest streak', unit: 'days', aos: 'fade-right' },
 ] as const satisfies readonly TGithubActivityStat[];

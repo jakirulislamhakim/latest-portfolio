@@ -1,18 +1,29 @@
-import Link from 'next/link';
 import { ArrowRight, Download, MapPin } from 'lucide-react';
 import { SectionLayout } from '@/components/layout/section-layout';
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { HERO_CONTENT } from '../constants';
 import { HeroSocialLinks } from './hero-social-links';
+import { HeroTypewriter } from './hero-typewriter';
 import { HeroVisual } from './hero-visual';
 
 export function HeroSection() {
   return (
-    <SectionLayout id="hero" aria-labelledby="hero-heading" needTopPadding>
+    <SectionLayout
+      id="hero"
+      aria-labelledby="hero-heading"
+      needTopPadding
+      className="relative overflow-hidden"
+    >
+      {/* Subtle Ambient Dot Grid (Low Opacity, Zero Noise) */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-10 bg-dot-grid [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_70%)] text-foreground/8"
+      />
+
       <div className="grid w-full grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-8">
         {/* Left Column: Text and Actions */}
-        <div className="order-2 flex flex-col items-start gap-6 lg:order-1 lg:col-span-7">
+        <div className="order-2 flex animate-hero-slide-left flex-col items-start gap-6 lg:order-1 lg:col-span-7">
           {/* Headings */}
           <div className="space-y-1">
             <p className="font-heading text-lg font-medium text-muted-foreground md:text-xl">
@@ -29,7 +40,7 @@ export function HeroSection() {
             </h1>
 
             <h2 className="font-heading text-xl font-semibold text-foreground md:text-2xl">
-              {HERO_CONTENT.designations}
+              <HeroTypewriter roles={HERO_CONTENT.roles} />
             </h2>
           </div>
 
@@ -45,7 +56,7 @@ export function HeroSection() {
 
           {/* Action CTAs */}
           <div className="flex flex-wrap items-center gap-2 pt-2 md:gap-4">
-            <Link
+            <a
               href={HERO_CONTENT.primaryCta.href}
               className={cn(
                 buttonVariants(),
@@ -54,7 +65,7 @@ export function HeroSection() {
             >
               <span>{HERO_CONTENT.primaryCta.label}</span>
               <ArrowRight className="size-4 transition-transform duration-200 group-hover:translate-x-1" />
-            </Link>
+            </a>
 
             <a
               href={HERO_CONTENT.secondaryCta.href}
@@ -74,7 +85,7 @@ export function HeroSection() {
         </div>
 
         {/* Right Column: Visual Composition */}
-        <div className="order-1 flex items-center justify-center lg:order-2 lg:col-span-5">
+        <div className="order-1 flex animate-hero-slide-right items-center justify-center lg:order-2 lg:col-span-5">
           <HeroVisual />
         </div>
       </div>

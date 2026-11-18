@@ -307,16 +307,21 @@ export function Navbar() {
     setIsMobileMenuOpen((prev) => !prev);
   };
 
+  const handleLogoClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    handleHashLinkClick(event, '/#hero', handleNavigate);
+  };
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 md:px-6 lg:px-8">
         <Link
-          href="/"
+          href="/#hero"
+          onClick={handleLogoClick}
           className="group flex items-center gap-1 text-foreground transition-opacity hover:opacity-90"
         >
           <BrandMark priority />
           <div className="flex flex-col">
-            <span className="font-heading text-sm font-semibold tracking-tight text-foreground sm:text-base">
+            <span className="font-heading text-sm font-semibold tracking-tight text-foreground text-primary sm:text-base">
               {SITE.name}
             </span>
             <span className="text-xs text-muted-foreground">{SITE.role}</span>

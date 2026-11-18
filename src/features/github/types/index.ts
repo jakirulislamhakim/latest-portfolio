@@ -6,6 +6,7 @@ export type TGithubActivityStat = {
   id: TGithubActivityStatId;
   label: string;
   unit: '' | 'days';
+  aos?: 'fade-left' | 'fade-right';
 };
 
 export type TContributionLevelName =
