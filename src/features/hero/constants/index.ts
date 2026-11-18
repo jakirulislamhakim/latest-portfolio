@@ -1,6 +1,13 @@
 import { SITE, SOCIAL_LINKS } from '@/config/site';
 import type { THeroCodeSnippet, THeroTechBadge } from '../types';
 
+export const HERO_ROLES = [
+  'Software Developer',
+  'Full Stack Developer',
+  'MERN Stack Specialist',
+  'Next.js & TypeScript Enthusiast',
+] as const;
+
 export const HERO_CONTENT = {
   greeting: "Hi, I'm",
   name: 'Jakirul Islam Hakim',
@@ -8,6 +15,7 @@ export const HERO_CONTENT = {
   badge: 'Available for work',
   location: 'Dhaka, Bangladesh',
   designations: 'Software Developer',
+  roles: HERO_ROLES,
   primaryCta: {
     label: 'View My Work',
     href: '/#projects',

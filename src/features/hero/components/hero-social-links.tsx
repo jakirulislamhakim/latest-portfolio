@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { SocialIcon } from '@/components/shared/social-icon';
 import { SOCIAL_LINKS } from '@/config/site';
 import { HERO_CONTENT } from '../constants';
@@ -14,7 +13,7 @@ export function HeroSocialLinks() {
           const isExternal = link.href.startsWith('http');
 
           return (
-            <Link
+            <a
               key={link.id}
               href={link.href}
               {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
@@ -25,7 +24,7 @@ export function HeroSocialLinks() {
                 id={link.id}
                 className="size-4 text-muted-foreground transition-colors duration-200 group-hover:text-primary"
               />
-            </Link>
+            </a>
           );
         })}
       </div>

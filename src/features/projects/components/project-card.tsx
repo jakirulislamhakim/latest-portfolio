@@ -10,7 +10,11 @@ type TProjectCardProps = {
 
 export function ProjectCard({ project }: TProjectCardProps) {
   return (
-    <article className="flex h-full flex-col overflow-hidden rounded-xl border border-border bg-card shadow-xs">
+    <article
+      data-aos="fade-up"
+      suppressHydrationWarning
+      className="flex h-full flex-col overflow-hidden rounded-xl border border-border bg-card shadow-xs"
+    >
       <div className="relative aspect-video w-full bg-muted">
         <Image
           src={project.image.src}

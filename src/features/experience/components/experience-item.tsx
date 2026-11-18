@@ -20,7 +20,11 @@ export function ExperienceItem({ entry, isFirst, isLast }: TExperienceItemProps)
   const dateLabel = `${entry.startLabel} — ${entry.endLabel}`;
 
   return (
-    <li className="grid grid-cols-[12px_minmax(0,1fr)] gap-3">
+    <li
+      data-aos="fade-right"
+      suppressHydrationWarning
+      className="grid grid-cols-[12px_minmax(0,1fr)] gap-3"
+    >
       <div className="relative flex justify-center" aria-hidden="true">
         {isLast ? (
           <>

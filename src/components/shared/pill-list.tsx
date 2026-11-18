@@ -25,5 +25,9 @@ export function PillList({ items, label, className }: TPillListProps) {
 }
 
 export function Pill({ label }: { label: string }) {
-  return <span className={PILL_CLASS_NAME}>{label}</span>;
+  return (
+    <span data-aos="fade-up" suppressHydrationWarning className={PILL_CLASS_NAME}>
+      {label}
+    </span>
+  );
 }

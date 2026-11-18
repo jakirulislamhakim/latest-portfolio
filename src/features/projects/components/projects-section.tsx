@@ -6,7 +6,7 @@ import { ProjectsShowcase } from './projects-showcase';
 export function ProjectsSection() {
   return (
     <SectionLayout id="projects" aria-labelledby="projects-heading">
-      <div>
+      <div data-aos="fade-up" suppressHydrationWarning>
         <h2 id="projects-heading" className="text-center">
           {PROJECTS_CONTENT.heading}
         </h2>
