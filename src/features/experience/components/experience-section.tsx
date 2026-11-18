@@ -8,7 +8,7 @@ export function ExperienceSection() {
 
   return (
     <SectionLayout id="experience" aria-labelledby="experience-heading">
-      <div>
+      <div data-aos="fade-up" suppressHydrationWarning>
         <h2 id="experience-heading" className="text-center">
           {EXPERIENCE_CONTENT.heading}
         </h2>
@@ -28,7 +28,7 @@ export function ExperienceSection() {
         ))}
       </ol>
 
-      <div className="mx-auto mt-2 max-w-3xl pl-6">
+      <div data-aos="fade-up" suppressHydrationWarning className="mx-auto mt-2 max-w-3xl pl-6">
         <a
           href={SITE.cvHref}
           download

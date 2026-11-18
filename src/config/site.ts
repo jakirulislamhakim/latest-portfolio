@@ -15,6 +15,10 @@ export type TSocialLink = {
   ariaLabel: string;
 };
 
+export const WHATSAPP_PHONE = '8801736100945';
+export const WHATSAPP_PREFILLED_MESSAGE = `*Hello Jakirul, I reviewed your profile and projects. Are you currently available for work or a quick chat?* `;
+export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(WHATSAPP_PREFILLED_MESSAGE)}`;
+
 export const SITE = {
   name: 'JAKIRUL ISLAM',
   fullName: 'Jakirul Islam Hakim',
@@ -99,7 +103,7 @@ export const SOCIAL_LINKS = [
   {
     id: 'whatsapp',
     name: 'WhatsApp',
-    href: 'https://wa.me/8801736100945',
+    href: WHATSAPP_URL,
     ariaLabel: 'Chat with me on WhatsApp',
   },
   {

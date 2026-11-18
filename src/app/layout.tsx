@@ -3,6 +3,7 @@ import { Navbar } from '@/components/layout/navbar';
 import { Footer } from '@/components/layout/footer';
 import { ThemeProvider } from '@/providers';
 import { fontVariables } from '@/lib/fonts';
+import { AosInit } from '@/lib/aos-init';
 import '@/app/globals.css';
 
 export const metadata: Metadata = {
@@ -21,13 +22,14 @@ export default function RootLayout({
       className={`${fontVariables} h-full scroll-smooth antialiased`}
       suppressHydrationWarning
     >
-      <body className="flex min-h-full flex-col" suppressHydrationWarning>
+      <body className="flex min-h-full flex-col overflow-x-hidden" suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="dark"
+          enableSystem={false}
           disableTransitionOnChange
         >
+          <AosInit />
           <Navbar />
           <main className="flex-1">{children}</main>
           <Footer />

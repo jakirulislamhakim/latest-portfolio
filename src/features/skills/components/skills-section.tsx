@@ -5,7 +5,7 @@ import { SkillCategoryCard } from './skill-category-card';
 export function SkillsSection() {
   return (
     <SectionLayout id="skills" aria-labelledby="skills-heading">
-      <div>
+      <div data-aos="fade-up" suppressHydrationWarning>
         <h2 id="skills-heading" className="mt-2 text-center">
           {SKILLS_CONTENT.heading}
         </h2>

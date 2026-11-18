@@ -40,11 +40,17 @@ export function ContactSteps() {
 
   return (
     <div className="mt-8">
-      <p className="text-md text-start font-semibold tracking-wide text-muted-foreground md:text-center">
-        {CONTACT_CONTENT.stepsLabel}
+      <p
+        data-aos="zoom-in-up"
+        suppressHydrationWarning
+        className="text-md text-start font-semibold tracking-wide text-muted-foreground md:text-center"
+      >
+        {CONTACT_CONTENT.stepsLabel} ?
       </p>
 
       <ol
+        data-aos="fade-up"
+        suppressHydrationWarning
         aria-label={CONTACT_CONTENT.stepsLabel}
         className="relative mt-4 flex flex-col md:flex-row"
       >

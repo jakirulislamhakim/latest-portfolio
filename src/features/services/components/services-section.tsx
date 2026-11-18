@@ -7,13 +7,21 @@ import { ServicesCta } from './services-cta';
 export function ServicesSection() {
   return (
     <SectionLayout id="services" aria-labelledby="services-heading">
-      <div className="text-center">
+      <div data-aos="fade-up" suppressHydrationWarning className="text-center">
         <h2 id="services-heading">{SERVICES_CONTENT.heading}</h2>
       </div>
 
-      <div className="mt-8 rounded-md border border-border bg-card px-2 py-8 shadow-xs md:px-4 md:py-16">
+      <div
+        data-aos="fade-up"
+        suppressHydrationWarning
+        className="mt-8 rounded-md border border-border bg-card px-2 py-8 shadow-xs md:px-4 md:py-16"
+      >
         <div className="grid items-center gap-6 lg:grid-cols-[minmax(0,0.42fr)_minmax(0,0.58fr)] lg:gap-8">
-          <figure className="relative mx-auto w-full max-w-md overflow-hidden rounded-lg bg-muted/30 lg:max-w-none">
+          <figure
+            data-aos="zoom-in"
+            suppressHydrationWarning
+            className="relative mx-auto w-full max-w-md overflow-hidden rounded-lg bg-muted/30 lg:max-w-none"
+          >
             <Image
               src={SERVICES_IMAGE.src}
               alt={SERVICES_IMAGE.alt}

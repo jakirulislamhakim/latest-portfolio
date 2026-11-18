@@ -1,3 +1,4 @@
+import { AnimatedCounter } from '@/components/shared/animated-counter';
 import { cn } from '@/lib/utils';
 import type { TAboutStat } from '../types';
 
@@ -10,7 +11,11 @@ function AboutStatValue({ value }: TAboutStatValueProps) {
     return null;
   }
 
-  return <p className="font-heading text-2xl font-bold text-primary">{value}</p>;
+  return (
+    <p className="font-heading text-2xl font-bold text-primary">
+      <AnimatedCounter value={value} />
+    </p>
+  );
 }
 
 type TAboutStatCardProps = {

@@ -13,7 +13,11 @@ export function SkillCategoryCard({ category }: TSkillCategoryCardProps) {
   }));
 
   return (
-    <li className="rounded-sm border border-border/50 bg-card p-4 shadow-xs md:p-5">
+    <li
+      data-aos="fade-up"
+      suppressHydrationWarning
+      className="rounded-sm border border-border/50 bg-card p-4 shadow-xs md:p-5"
+    >
       <div className="flex items-center gap-2">
         <span className="flex size-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
           <Icon className="size-5" aria-hidden="true" />

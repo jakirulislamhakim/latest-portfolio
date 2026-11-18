@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { ArrowUpRight, Download, Phone } from 'lucide-react';
 import { SocialIcon } from '@/components/shared/social-icon';
 import { buttonVariants } from '@/components/ui/button';
@@ -51,9 +50,9 @@ function ContactActionLink({ action }: TContactActionLinkProps) {
 
   if (action.kind === 'internal') {
     return (
-      <Link href={action.href} className={className}>
+      <a href={action.href} className={className}>
         {content}
-      </Link>
+      </a>
     );
   }
 

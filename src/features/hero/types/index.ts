@@ -21,3 +21,10 @@ export type THeroCodeSnippet = {
   variableName: string;
   properties: readonly THeroCodeProperty[];
 };
+
+export type THeroTypewriterProps = {
+  readonly roles: readonly string[];
+  readonly typingSpeedMs?: number;
+  readonly deletingSpeedMs?: number;
+  readonly pauseDurationMs?: number;
+};

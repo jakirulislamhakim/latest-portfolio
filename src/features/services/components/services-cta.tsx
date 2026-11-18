@@ -5,7 +5,11 @@ import { SERVICES_CONTENT } from '../constants';
 
 export function ServicesCta() {
   return (
-    <div className="mt-10 flex flex-col items-center gap-4 text-center md:mt-12">
+    <div
+      data-aos="zoom-in"
+      suppressHydrationWarning
+      className="mt-10 flex flex-col items-center gap-4 text-center md:mt-12"
+    >
       <p className="max-w-prose text-base leading-relaxed text-muted-foreground">
         {SERVICES_CONTENT.ctaIntro}
       </p>
