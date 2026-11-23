@@ -4,7 +4,7 @@ export const EXPERIENCE_CONTENT = {
   heading: 'Experience',
   intro:
     'Building real-world web applications, collaborating with a team, and developing full-stack solutions.',
-  cvLabel: 'Download CV',
+  resumeLabel: 'Download Resume',
 } as const;
 
 export const EXPERIENCE_ENTRIES = [

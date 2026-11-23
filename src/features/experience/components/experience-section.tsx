@@ -30,11 +30,14 @@ export function ExperienceSection() {
 
       <div data-aos="fade-up" suppressHydrationWarning className="mx-auto mt-2 max-w-3xl pl-6">
         <a
-          href={SITE.cvHref}
-          download
+          href={SITE.resumeHref}
+          target="_blank"
+          rel="noopener noreferrer"
+          data-umami-event="download_resume"
+          data-umami-event-location="experience"
           className="inline-flex min-h-11 items-center rounded-md text-sm font-semibold text-primary underline-offset-4 hover:underline focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
         >
-          {EXPERIENCE_CONTENT.cvLabel}
+          {EXPERIENCE_CONTENT.resumeLabel}
         </a>
       </div>
     </SectionLayout>

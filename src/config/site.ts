@@ -27,7 +27,7 @@ export const SITE = {
   headerSlogan: ['TakeRisk', 'HaveFun'],
   statusLine: 'Built with Next.js',
   timezone: 'Asia/Dhaka',
-  cvHref: '/cv.pdf',
+  resumeHref: 'https://drive.google.com/file/d/1IL6VqRKdRlRnlHNS4M96CGb5yoP-6E9e/view?usp=sharing',
   phone: '+8801736100945',
   url: 'https://jakirul-islam-hakim.vercel.app/',
 } as const;

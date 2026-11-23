@@ -24,13 +24,13 @@ export const ABOUT_STATS = [
   {
     id: 'experience',
     label: 'Experience',
-    // Years are not on the site or the CV, so the number stays empty.
+    // Years are not on the site or the resume, so the number stays empty.
     value: '1+',
   },
   {
     id: 'projects',
     label: 'Projects completed',
-    // A project count is not on the site or the CV, so the number stays empty.
+    // A project count is not on the site or the resume, so the number stays empty.
     value: '10+',
   },
   {
