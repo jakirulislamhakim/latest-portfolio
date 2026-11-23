@@ -8,11 +8,13 @@ import { z } from 'zod';
 export const clientEnv = createEnv({
   client: {
     NEXT_PUBLIC_SENTRY_DSN: z.string().url(),
+    NEXT_PUBLIC_UMAMI_WEBSITE_ID: z.string().uuid().optional(),
   },
 
   // Must explicitly destructure NEXT_PUBLIC_* vars for Next.js static replacement
   runtimeEnv: {
     NEXT_PUBLIC_SENTRY_DSN: process.env.NEXT_PUBLIC_SENTRY_DSN,
+    NEXT_PUBLIC_UMAMI_WEBSITE_ID: process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID,
   },
 
   emptyStringAsUndefined: true,

@@ -1,6 +1,7 @@
 'use client';
 
 import { useId, useRef, useState, type KeyboardEvent } from 'react';
+import { trackEvent } from '@/lib/analytics';
 import {
   findTerminalCommand,
   getTerminalCommandNames,
@@ -80,6 +81,7 @@ export function useTerminal(): TUseTerminalResult {
 
     const inputLine = createLine('input', `${TERMINAL_CONTENT.prompt} ${trimmed}`);
     const [commandName = '', ...args] = trimmed.split(/\s+/);
+    trackEvent('terminal_command', { command: commandName });
     const command = findTerminalCommand(commandName);
 
     if (!command) {

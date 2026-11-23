@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import type { FormEvent } from 'react';
 import { Button } from '@/components/ui/button';
+import { trackEvent } from '@/lib/analytics';
 import { cn } from '@/lib/utils';
 import { sendContactEmail } from '../actions/send-contact-email';
 import { CONTACT_FORM } from '../constants';
@@ -77,6 +78,7 @@ export function ContactForm() {
       const result = await sendContactEmail(parsed.data);
 
       if (!result.ok) {
+        trackEvent('contact_submit', { success: false });
         if ('fieldErrors' in result) {
           setFieldErrors(result.fieldErrors);
           return;
@@ -88,9 +90,11 @@ export function ContactForm() {
 
       form.reset();
       setIsSent(true);
+      trackEvent('contact_submit', { success: true });
     } catch (error) {
       console.error('Contact form submit failed.', error);
       setSubmitError(CONTACT_FORM.sendError);
+      trackEvent('contact_submit', { success: false });
     } finally {
       setIsSubmitting(false);
     }

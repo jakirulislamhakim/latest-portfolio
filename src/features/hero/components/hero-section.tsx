@@ -69,7 +69,10 @@ export function HeroSection() {
 
             <a
               href={HERO_CONTENT.secondaryCta.href}
-              download
+              target="_blank"
+              rel="noopener noreferrer"
+              data-umami-event="download_resume"
+              data-umami-event-location="hero"
               className={cn(
                 buttonVariants({ variant: 'outline' }),
                 'group rounded-xl border-border/80 bg-card/80 px-5 text-sm font-semibold text-foreground backdrop-blur-xs transition-[transform,background-color] duration-200 hover:-translate-y-0.5 hover:bg-muted md:px-6 md:text-base'

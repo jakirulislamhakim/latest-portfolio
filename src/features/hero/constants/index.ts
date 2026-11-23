@@ -21,8 +21,8 @@ export const HERO_CONTENT = {
     href: '/#projects',
   },
   secondaryCta: {
-    label: 'Download CV',
-    href: SITE.cvHref,
+    label: 'Resume',
+    href: SITE.resumeHref,
   },
   socialsLabel: 'Follow Me',
 } as const;
